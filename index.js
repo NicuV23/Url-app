@@ -11,21 +11,16 @@ async function shortenUrl() {
 
   if (originalUrl !== "") {
     try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          apikey: apiKey,
-        },
-        body: JSON.stringify({
-          destination: originalUrl,
-        }),
-      });
+      const response = await fetch(
+        `${apiUrl}?apikey=${apiKey}&destination=${encodeURIComponent(
+          originalUrl
+        )}`
+      );
 
       if (response.ok) {
         const data = await response.json();
         const shortenedLink = data.shortUrl;
-        shortUrl.textContent = shortenedLink;
+        shortUrl.innerText = shortenedLink;
       } else {
         alert("Error shortening the URL. Please try again.");
       }
