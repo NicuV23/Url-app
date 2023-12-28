@@ -22,6 +22,18 @@ main {
   height: 25px;
 }
 
+.shortUrl {
+  background-color: darkslategrey;
+  border-radius: 10px;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  align-items: center;
+}
+
 .leftHeader {
   display: flex;
   flex-direction: row;
