@@ -169,6 +169,7 @@ section {
 .shorterImage {
   background: hsl(257, 27%, 26%);
   border-radius: 10px;
+  width: 100%;
 }
 .M {
   display: none;
@@ -377,7 +378,7 @@ footer {
   display: none;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   .leftHeaderBtn {
     display: none;
   }
@@ -443,7 +444,7 @@ footer {
   }
   .shorten {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     gap: 17px;
@@ -458,13 +459,13 @@ footer {
     display: none;
   }
   .shortenInput {
-    width: 50vw;
+    width: 50%;
     height: 40px;
     margin-left: 20px;
     font-size: 14px;
   }
   .shortenBtn {
-    width: 50vw;
+    width: 50%;
     height: 40px;
     margin-left: 20px;
     font-size: 16px;
